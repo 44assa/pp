@@ -1,32 +1,5 @@
 {% extends 'main/layout.html' %}
-{% load static %}
-
-{% block title %}
-<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-<title>Главная страница</title>
-{% endblock %}
-
-
 
 {%  block content %}
-<main class="landing-container">
-      <section class="content-wrapper">
-        <h1 class="main-heading">
-          Стажировка и подработка прямо в университете!
-        </h1>
-
-        <div class="search-section">
-          <div class="search-container">
-            <div class="input-wrapper">
-              <input
-                type="text"
-                placeholder="Профессия, должность или компания"
-                class="search-input"
-              />
-            </div>
-          </div>
-          <button class="submit-button">Оставить заявку</button>
-        </div>
-</main>
 
 {% endblock %}
