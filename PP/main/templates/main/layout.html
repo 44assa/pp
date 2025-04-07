@@ -1,59 +1,68 @@
 {% load static %}
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ru">
-	<head>
-		<meta charset="utf-8">
-		{% block title %}
-		{% endblock %}
-	</head>
-	<body>
-		<header>
-			<div class="flex">
-				<img class="logotype" src="{% static 'main/img/logo.png' %}" width="70" height="30" alt="Логотип">
-				<p class="logo"><a href="{% url 'home' %}">CampusJob</a></p>
-			</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	{% block title %}
+	{% endblock %}
+  </head>
+  <body>
+      <header class="main-header">
+		  <img class="logotype" src="{% static 'main/img/logo.png' %}" width="70" height="30" alt="Логотип">
+		  <p class="logo">CampusJob</p>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li><a href="{% url 'vacancy' %}" class="nav-link">Вакансии</a></li>
+            <li><a href="{% url 'myApplication' %}" class="nav-link">Мои заявки</a></li>
+            <li><a href="{% url 'entrance' %}" class="nav-link">Войти</a></li>
+            <li>
+              <div class="language-selector">
+                <span>Перевод</span>
+                <span class="dropdown-arrow"></span>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-			<nav>
-				<ul class="main-nav">
-					<li class="nav-item"><a href="{% url 'vacancy' %}">Вакансии</a></li>
-					<li class="nav-item"><a href="{% url 'myApplication' %}">Мои заявки</a></li>
-					<li class="nav-item"><a href="{% url 'entrance' %}">Войти</a></li>
-					<li class="nav-item"><a href="#">Перевод</a> <img src="{% static 'main/img/translate.png' %}" width="20" height="10" alt="Кнопка разворота переводов"></li>
-				</ul>
-			</nav>
-		</header>
-		{% block content %}
+      {% block content %}
+	  {% endblock %}
 
-		{% endblock %}
-		<footer class="footer">
-		  <section class="contact-info">
-			<h2 class="contact-title">Контакты</h2>
-			<p class="phone-number">8-800-100-50-44</p>
-			<p class="phone-note">Звонок по россии бесплатный</p>
-			<p class="email">contact@urfu.ru</p>
-		  </section>
+      <footer class="main-footer">
+        <div class="footer-content">
+          <section class="contact-section">
+            <h2 class="footer-heading">Контакты</h2>
+            <p class="phone-number">8-800-100-50-44</p>
+            <p class="phone-note">Звонок по россии бесплатный</p>
+            <p class="email">contact@urfu.ru</p>
+          </section>
 
-		  <section class="university-info">
-			<p class="mission-statement">
-			  Центр карьеры Университета – ваш ключ к успешному будущему через
-			  стажировки и временную работу прямо на базе вуза!
-			</p>
-			<p class="university-name">
-			  ФГАОУ ВО «УрФУ имени первого Президента России Б.Н. Ельцина»
-			</p>
-		  </section>
+          <section class="about-section">
+            <p class="about-text">
+              Центр карьеры Университета – ваш ключ к успешному будущему через
+              стажировки и временную работу прямо на базе вуза!
+            </p>
+            <p class="university-name">
+              ФГАОУ ВО «УрФУ имени первого Президента России Б.Н. Ельцина»
+            </p>
+          </section>
 
-		  <section class="social-media">
-			<h2 class="social-title">Социальные сети</h2>
-			<div class="social-item vk">
-			  <img src="{% static 'main/img/vk.png' %}" alt="ВКонтакте" class="social-icon vk-icon" />
-			  <p class="social-name"><a href="#">вконтакте</a></p>
-			</div>
-			<div class="social-item telegram">
-			  <img src="{% static 'main/img/telegram.png' %}" alt="Telegram" class="social-icon telegram-icon" />
-			  <p class="social-name"><a href="#">telegram</a></p>
-			</div>
-		  </section>
-		</footer>
-	</body>
+          <section class="social-section">
+            <h2 class="footer-heading">Социальные сети</h2>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="{% static 'main/img/vk.png' %}" alt="VK icon" class="social-icon" />
+                <span>вконтакте</span>
+              </a>
+              <a href="#" class="social-link">
+                <img src="{% static 'main/img/telegram.png' %}" alt="Telegram icon" class="social-icon" />
+                <span>telegram</span>
+              </a>
+            </div>
+          </section>
+        </div>
+      </footer>
+  </body>
 </html>

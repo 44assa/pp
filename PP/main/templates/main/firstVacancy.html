@@ -1,5 +1,68 @@
 {% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Первая вакансия</title>
+<link rel="stylesheet" href="{% static 'main/css/firstVacancy.css' %}" />
+{% endblock %}
 
 {%  block content %}
+<main class="job-content">
+    <section class="job-header">
+      <img src="{% static 'main/img/urfu_logo.png' %}" alt="Job Icon" class="job-icon" />
+      <h2 class="job-title">
+        Помощник исследователя в лаборатории биоинженерии
+      </h2>
+    </section>
 
+    <p class="job-payment-info">
+      Оплата производится один раз в месяц в виде стипендии
+    </p>
+    <p class="job-salary">15000 рублей<br /></p>
+    <a href="{% url 'application' %}">
+    <button class="apply-button">Оставить заявку</button>
+    </a>
+    <section class="job-responsibilities">
+      <h3 class="section-title">В ваши обязанности будет входить</h3>
+      <p class="section-content">
+        <li>Стерилизация инструментов, приготовление растворов, подготовка
+        образцов для экспериментов</li>
+        <li>Запись, организация и анализ экспериментальных данных, создание
+        графиков и таблиц</li>
+        <li>Написание отчетов</li>
+        <li>Соблюдение правил техники безопасности, уборка рабочего места</li>
+      </p>
+    </section>
+
+    <section class="job-requirements">
+      <h3 class="section-title">Мы ждем от вас</h3>
+      <p class="section-content">
+        <li>Студент 3-5 курсов биологического, химического или инженерного факультета</li>
+        <li>Базовые знания в области биологии/химии/биоинженерии</li>
+        <li>Умение работать с лабораторным оборудованием</li>
+        <li>Внимательность к деталям, ответственность, желание учиться</li>
+      </p>
+    </section>
+
+    <section class="job-conditions">
+      <h3 class="section-title">Условия<br /></h3>
+      <div class="section-content">
+        <ul>
+          <li><span class="bold-text">График</span></li>
+        </ul>
+        Гибкий график. Согласовывется с научным руководителем на неделю
+        вперёд.
+        <ul>
+          <li><span class="bold-text">Длительность стажировки</span></li>
+        </ul>
+        3 месяца (с возможностью продления)
+        <ul>
+          <li><span class="bold-text">Бонусы</span></li>
+        </ul>
+        Компенсация проезда до места работы, если вы проживаете не в
+        общежитии<br />
+        Скидка на обеды в столовых внутри университета<br /><br /><br />
+      </div>
+    </section>
+</main>
 {% endblock %}

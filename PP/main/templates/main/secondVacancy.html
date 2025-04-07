@@ -1,0 +1,66 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Вторая какансия</title>
+<link rel="stylesheet" href="{% static 'main/css/secondVacancy.css' %}" />
+{% endblock %}
+
+{%  block content %}
+<main class="job-content">
+    <section class="job-header">
+      <img src="{% static 'main/img/rostelecom_logo.png' %}" alt="Job Icon" class="job-icon" />
+      <h2 class="job-title">
+        SMM-менеджер в ПАО “Ростелеком”
+      </h2>
+    </section>
+
+    <p class="job-payment-info">
+      Оплата производится два раза в месяц
+    </p>
+    <p class="job-salary">250 рублей в час<br /></p>
+    <a href="{% url 'application' %}">
+    <button class="apply-button">Оставить заявку</button>
+    </a>
+    <section class="job-responsibilities">
+      <h3 class="section-title">В ваши обязанности будет входить</h3>
+      <p class="section-content">
+        <li>Планирование тем, форматов публикаций (тексты, фото, видео, сторис), определение частоты постинга</li>
+        <li>Написание постов, подписей к фотографиям и видео, рекламных объявлений</li>
+        <li>Общение с аудиторией, ответы на вопросы, решение проблем пользователей</li>
+        <li>Отслеживание показателей охвата, вовлеченности</li>
+      </p>
+    </section>
+
+    <section class="job-requirements">
+      <h3 class="section-title">Мы ждем от вас</h3>
+      <p class="section-content">
+        <li>Опыт работы с социальными сетями</li>
+        <li>Знание основ SMM-маркетинга</li>
+        <li>Креативность, коммуникабельность, ответственность</li>
+        <li>Навыки работы с графическими редакторами (желательно, но не обязательно)</li>
+        <li>Навыки копирайтинга</li>
+      </p>
+    </section>
+
+    <section class="job-conditions">
+      <h3 class="section-title">Условия<br /></h3>
+      <div class="section-content">
+        <ul>
+          <li><span class="bold-text">График</span></li>
+        </ul>
+        Гибкий график. Возможность совмещения с учёбой
+        <ul>
+          <li><span class="bold-text">Опыт работы</span></li>
+        </ul>
+        Возможность получения ценного опыта в сфере digital-маркетинга
+        <ul>
+          <li><span class="bold-text">Бонусы</span></li>
+        </ul>
+         Возможность продвижения по карьерной лестнице(при качественном и добросовестном
+         выполнении своих обязанностей)<br />
+        Возможность работы в позитивной и поддерживающей команде
+      </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'main/css/registration.css' %}">
+<title>Главная страница</title>
+{% endblock %}
+
+{%  block content %}
+<main class="registration-content">
+  <section class="registration-form-container">
+    <div class="registration-form-wrapper" space="87">
+      <div class="form-columns">
+        <div class="form-column form-column-main">
+          <div class="form-content">
+            <h2 class="form-title">
+              Заполните информацию
+            </h2>
+            <div class="form-group">
+              <label class="form-label">Фамилия, имя и отчество*</label>
+              <input type="text" class="form-input" placeholder="Укажите ваше ФИО">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Дата рождения*</label>
+              <div class="form-row" space="30">
+                <div class="form-row-columns">
+                  <div class="form-row-column">
+                    <div class="form-field-group">
+                      <input type="text" class="form-input" placeholder="Укажите дату вашего рождения">
+                      <label class="form-label">Телефон*</label>
+                      <input type="tel" class="form-input" placeholder="Укажите номер вашего мобильного телефона">
+                    </div>
+                  </div>
+                  <div class="form-row-column">
+                    <div class="form-field-group">
+                      <label class="form-label">E-mail*</label>
+                      <input type="email" class="form-input" placeholder="Укажите адрес эл. почты">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Гражданство*</label>
+              <input type="text" class="form-input" placeholder="Укажите ваше гражданство">
+            </div>
+          </div>
+        </div>
+        <div class="form-column form-column-side">
+          <div class="form-side-content">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7172f28d6a839d5755d282065e90aea428bcf4b0?placeholderIfAbsent=true&apiKey=c67d77538d874c86b84839183a3af213" class="form-image" alt="Registration" />
+            <button class="next-button">Далее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

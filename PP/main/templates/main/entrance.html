@@ -1,0 +1,44 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Вход в аккаунт</title>
+<link rel="stylesheet" href="{% static 'main/css/entrance.css' %}" />
+{% endblock %}
+
+{%  block content %}
+<main class="main-content">
+  <section class="login-section" data-el="div-2">
+    <div class="login-container">
+      <div class="login-column">
+        <div class="login-form">
+          <h2 class="login-title">Вход в личный кабинет</h2>
+          <label for="email" class="form-label">Электронная почта</label>
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="Введите email"
+          />
+          <p class="error-message">Укажите адрес эл. почты</p>
+
+          <label for="password" class="form-label">Пароль</label>
+          <input
+            type="password"
+            id="password"
+            class="form-input"
+            placeholder="Введите пароль"
+          />
+          <p class="error-message">Укажите пароль</p>
+
+          <button class="login-button">Далее</button>
+          <a href="{% url 'registration' %}" class="register-link">Зарегестрироваться</a>
+        </div>
+      </div>
+      <div class="illustration-column">
+        <img src="{% static 'main/img/entrance.png' %}" alt="Login Illustration" class="login-illustration"/>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

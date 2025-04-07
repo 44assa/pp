@@ -1,5 +1,142 @@
 {% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Все вакансии</title>
+<link rel="stylesheet" href="{% static 'main/css/vacancy.css' %}"/>
+{% endblock %}
 
 {%  block content %}
 
+<main class="main-content">
+<h1 class="job-count">Найдено n вакансий</h1>
+
+<section class="filters-section">
+  <div class="filter-group">
+    <h2 class="filter-title">Тип занятости</h2>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>Подработка</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" checked class="filter-checkbox">
+      <span>Стажировка</span>
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <h2 class="filter-title">Место работы</h2>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>В университете</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>В партнёрских организациях</span>
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <h2 class="filter-title">Количество часов в неделю</h2>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>1-10</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>11-20</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>21-30</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>31-40</span>
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <h2 class="filter-title">Специализация</h2>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>Техническая</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>Бизнес, маркетинг</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>Научная, исследовательская</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>Гуманитарная</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>Творческая</span>
+    </label>
+  </div>
+
+  <div class="filter-group">
+    <h2 class="filter-title">Частота выплат</h2>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>после каждой смены</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>раз в неделю</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>два раза в месяц</span>
+    </label>
+    <label class="filter-option">
+      <input type="checkbox" class="filter-checkbox">
+      <span>раз в месяц</span>
+    </label>
+  </div>
+</section>
+
+<section class="job-listings">
+  <a href="{% url 'firstVacancy' %}">
+  <article class="job-card">
+    <div class="job-header">
+      <h2 class="job-title">Помощник исследователя в лаборатории биоинженерии</h2>
+      <img src="{% static 'main/img/university.png' %}" alt="University icon" class="company-icon">
+    </div>
+    <div class="job-details">
+      <p class="job-salary">15000 рублей в месяц</p>
+      <p class="job-payment">Выплаты: раз в месяц</p>
+      <p class="job-hours">Занятость: 20 часов в неделю</p>
+    </div>
+    <img src="{% static 'main/img/urfu_logo.png' %}" alt="UrFU Logo" class="company-logo">
+      <a href="{% url 'application' %}">
+      <button class="apply-button">Оставить заявку</button>
+      </a>
+  </article>
+  </a>
+
+  <a href="{% url 'secondVacancy' %}">
+  <article class="job-card">
+    <div class="job-header">
+      <h2 class="job-title">SMM-менеджер</h2>
+      <img src="{% static 'main/img/partnership.png' %}" alt="Partnership icon" class="company-icon">
+    </div>
+    <div class="job-details">
+      <p class="job-salary">290 рублей/час</p>
+      <p class="job-payment">Выплаты: два раза в месяц</p>
+      <p class="job-hours">Занятость: 30 часов в неделю</p>
+    </div>
+    <img src="{% static 'main/img/rostelecom_logo.png' %}" alt="Rostelecom Logo" class="company-logo">
+    <a href="{% url 'application' %}">
+    <button class="apply-button">Оставить заявку</button>
+    </a>
+  </article>
+  </a>
+</section>
+</main>
 {% endblock %}

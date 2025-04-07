@@ -1,0 +1,60 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+<link rel="stylesheet" href="{% static 'main/css/myApplication.css' %}">
+<title>Главная страница</title>
+{% endblock %}
+
+{%  block content %}
+<main class="main-content">
+  <section class="applications-section">
+    <h2 class="section-title">Отклики и приглашения</h2>
+
+    <div class="filter-tabs">
+      <button class="filter-tab active">Все 2</button>
+      <button class="filter-tab">Ожидание 1</button>
+      <button class="filter-tab">Приглашение 1</button>
+      <button class="filter-tab">Отказ</button>
+    </div>
+
+    <article class="application-card invitation">
+      <div class="card-content">
+        <div class="application-details">
+          <span class="status-label success">Приглашение<br /></span>
+          <h3 class="job-title">
+            Помощник исследователя в лаборатории биоинженерии
+          </h3>
+          <p class="company-name">
+            Уральский федеральный университет имени первого президента
+            России
+          </p>
+          <p class="date-label">сегодня<br /></p>
+        </div>
+        <img src="{% static 'main/img/urfu_logo.png' %}" class="company-logo" alt="Company logo" />
+      </div>
+      <div class="card-actions">
+        <button class="action-button">Отказаться</button>
+        <button class="action-button">Удалить</button>
+      </div>
+    </article>
+
+    <article class="application-card rejection">
+      <div class="card-content">
+        <div class="application-details">
+          <span class="status-label error">Отказ</span>
+          <h3 class="job-title">
+            Помощник исследователя в лаборатории биоинженерии
+          </h3>
+          <p class="company-name">ПАО "Ростелеком"</p>
+          <p class="date-label">27 марта<br /></p>
+        </div>
+        <div class="card-actions-column">
+          <img src="{% static 'main/img/rostelecom_logo.png' %}" class="company-logo" alt="Company logo" />
+          <button class="action-button">Удалить</button>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+{% endblock %}

@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -74,60 +75,130 @@ body {
 /*Конец шапки*/
 
 /*Основной код(меняется)*/
-.hero-section {
-  padding: 75px 0;
-  min-height: 600px;
+.main-content {
+  min-height: 130vh;
+  padding: 40px;
   background-color: #6f1b84;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-content {
-  max-width: 1180px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-
-.hero-title {
+.job-count {
   color: #e0d2d6;
-  font-size: 45px;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Filters section */
+.filters-section {
+  width: 326px;
+  color: #e0d2d6;
+  font-family: Inter;
+  float: left;
+}
+
+.filter-group {
+  margin-bottom: 40px;
+}
+
+.filter-title {
+  font-size: 22px;
   font-style: italic;
   font-weight: 900;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-.search-container {
+.filter-option {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.search-input {
-  width: 500px;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 16px;
-  border: 3px solid #312a2a;
-  background-color: #9d60b2;
-}
-
-.submit-button {
-  color: #1e122d;
-  padding: 15px 30px;
-  border-radius: 12px;
-  border: 3px solid #312a2a;
-  font-family: "Montserrat", sans-serif;
-  font-size: 26px;
-  font-weight: 300;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-style: italic;
   cursor: pointer;
+}
+
+.filter-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #312a2a;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Job listings */
+.job-listings {
+  margin-right: 20%;
+  margin-left: 25%;
+  margin-top: -56%;
+}
+
+.job-card {
+  border-radius: 25px;
+  border: 5px solid #312a2a;
+  padding: 24px;
+  margin-bottom: 24px;
+  position: relative;
   background-color: #9d60b2;
 }
 
-.hero-image {
-  max-width: 738px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.job-title {
+  color: #e0d2d6;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  max-width: 80%;
+}
+
+.company-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.job-details {
+  color: #e0d2d6;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.job-salary, .job-payment, .job-hours {
+  margin-bottom: 8px;
+}
+
+.company-logo {
+  height: 50px;
+  margin: 16px 0;
+}
+
+.apply-button {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  color: #e0d2d6;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(136, 144, 194, 0.2),
+    0px 6px 20px rgba(37, 44, 97, 0.15);
+  background-color: #53086d;
+  text-decoration: none;
 }
 
 /*Начало подвала*/
