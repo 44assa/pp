@@ -2,10 +2,63 @@
 {% load static %}
 
 {% block title %}
-<link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
-<title>Главная страница</title>
+<link rel="stylesheet" href="{% static 'main/css/profile.css' %}">
+<title>Профиль</title>
 {% endblock %}
 
 {%  block content %}
+<main class="main-content">
+  <section class="profile-header">
+    <div class="profile-title-container">
+      <h1 class="profile-title">Имя Фамилия</h1>
+      <button class="logout-button">Выйти</button>
+    </div>
+    <p class="profile-welcome">
+      Добро пожаловать в личный кабинет кандидата!
+    </p>
+  </section>
 
+
+  <section class="action-cards">
+    <a href="{% url 'vacancy' %}">
+    <article class="action-card">
+      <img src="{% static 'main/img/work.png' %}" alt="Worker Icon" />
+      <h2 class="card-title">Выбрать вакансию</h2>
+    </article>
+    </a>
+    <a href="#bottom">
+    <article class="action-card">
+      <div class="icon-container">
+        <img src="{% static 'main/img/profile1.png' %}" alt="Circle Background" class="circle-bg" />
+      </div>
+      <h2 class="card-title">Редактировать профиль</h2>
+    </article>
+    </a>
+  </section>
+
+
+
+  <section class="edit-profile-section">
+    <div id="bottom"></div>
+    <h2 class="section-title">Редактирование</h2>
+    <div class="form-section">
+      <h3 class="form-section-title">Общая информация</h3>
+      <div class="form-fields">
+        <div class="form-field">Фамилия, имя и отчество</div>
+        <div class="form-field">Дата рождения</div>
+        <div class="form-field">Гражданство</div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <h3 class="form-section-title">Контактные данные</h3>
+      <div class="form-fields">
+        <div class="form-field">E-mail</div>
+        <div class="form-field">Телефон</div>
+      </div>
+    </div>
+
+    <button class="save-button">Сохранить</button>
+  </section>
+</main>
 {% endblock %}

@@ -73,62 +73,154 @@ body {
 }
 
 /*Конец шапки*/
-
-/*Основной код(меняется)*/
-.hero-section {
-  padding: 75px 0;
-  min-height: 600px;
-  background-color: #6f1b84;
+.main-content {
+    padding: 5% 36px;
+    background-color: #6f1b84;
 }
 
-.hero-content {
-  max-width: 1180px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
+.profile-title-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.hero-title {
-  color: #e0d2d6;
-  font-size: 45px;
-  font-style: italic;
-  font-weight: 900;
-  margin-bottom: 40px;
+.profile-title {
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 62px;
+    font-weight: 700;
+    font-style: italic;
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
+.logout-button {
+    width: 160px;
+    height: 60px;
+    border: 3px solid #312a2a;
+    border-radius: 12px;
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 700;
+    font-style: italic;
+    background-color: #9d60b2;
+    cursor: pointer;
 }
 
-.search-input {
-  width: 500px;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 16px;
-  border: 3px solid #312a2a;
-  background-color: #9d60b2;
+.profile-welcome {
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 40px;
 }
 
-.submit-button {
-  color: #1e122d;
-  padding: 15px 30px;
-  border-radius: 12px;
-  border: 3px solid #312a2a;
-  font-family: "Montserrat", sans-serif;
-  font-size: 26px;
-  font-weight: 300;
-  cursor: pointer;
-  background-color: #9d60b2;
+.action-cards {
+    display: flex;
+    gap: 20%;
+    margin-top: 40px;
 }
 
-.hero-image {
-  max-width: 738px;
-  height: auto;
-  margin: 0 auto;
-  display: block;
+.action-card {
+    width: 618px;
+    height: 330px;
+    border: 5px solid #312a2a;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #9d60b2;
+    margin-left: 60px;
+}
+
+.icon-container {
+    position: relative;
+    width: 201px;
+    height: 201px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.card-title {
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 30px;
+}
+
+.edit-profile-section {
+    margin-top: 30%;
+    padding: 40px;
+    border: 5px solid #312a2a;
+    border-radius: 25px;
+    background-color: #9d60b2;
+}
+
+.section-title {
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.form-section {
+    margin-top: 30px;
+}
+
+.form-section-title {
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-field {
+    height: 50px;
+    border-radius: 10px;
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 100;
+    font-style: italic;
+    padding: 15px 20px;
+    background-color: #6f1b84;
+}
+
+.save-button {
+    border: 3px solid #312a2a;
+    border-radius: 12px;
+    color: #e0d2d6;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 700;
+    font-style: italic;
+    padding: 15px 30px;
+    margin-top: 30px;
+    align-self: flex-end;
+    background-color: #6f1b84;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
 }
 
 /*Начало подвала*/
